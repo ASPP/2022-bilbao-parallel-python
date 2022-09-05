@@ -4,6 +4,7 @@ pwdb = {
     "pelita": "81d",
     "aspp": "8d91",
     "ASPP": "1djk",
+    "tiziano": "asd,123",
 }
 
 
