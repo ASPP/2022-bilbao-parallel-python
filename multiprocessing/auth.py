@@ -1,3 +1,4 @@
+import sys
 import time
 
 pwdb = {
@@ -22,6 +23,12 @@ def check_user_exists(username):
     bool
         Whether the user exists in the database.
     """
-    time.sleep(0.5 * len(username))  # mimick slow server-side processing
+    wait = len(username)
+    while wait > 0:
+        # mimick slow server-side processing
+        time.sleep(min(wait, 1))
+        sys.stdout.write('.')
+        sys.stdout.flush()
+        wait -= 1
 
     return username in pwdb
